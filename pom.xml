@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.vepo.helloworld</groupId> <!-- Use um identificado para sua empresa                    -->
+    <artifactId>hello-world</artifactId>  <!-- Use um identificado para seu projeto                    -->
+    <version>1.0.0-SNAPSHOT</version>     <!-- Use um versão baseada em https://semver.org/lang/pt-BR/ -->
+    <name>Hello World!</name>             <!-- Dê um nome legal ao seu projeto                         -->
+    <properties>
+        <!-- Caso você se uma versão de Java diferente, altere a linha abaixo -->
+        <java.version>8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.parameters>true</maven.compiler.parameters>
+
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <junit.jupiter.version>5.9.0-M1</junit.jupiter.version>
+    </properties>
+
+    <dependencies>
+        <!-- Procure as dependências no mvnrepository.com -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+            <version>${junit.jupiter.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>hello-world</finalName> <!-- Esse nome é usado para construir o jar final -->
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <!-- mainClass>io.vepo.helloworld.HelloWorld</mainClass -->
+                    <mainClass>io.vepo.helloworld.HelloWorldSintaxe</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
