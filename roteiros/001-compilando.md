@@ -1,5 +1,9 @@
 # Java 101: Compilando seu código Java
 
+Para mais informações:
+ - https://blog.vepo.dev/posts/java-101
+ - https://blog.vepo.dev/java-101/
+
 - [X] O que é um programa de computador?
   - [X] Linguagem de Máquina vs Linguagem Assembly
   - [X] Linguagem formal
