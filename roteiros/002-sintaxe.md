@@ -1,0 +1,21 @@
+# Java 101: A Sintaxe do Java
+
+- [X] Como estudar a linguagem facilmente? JBang!
+    - [X] `jbang template list`
+    - [ ] `jbang init -t cli hellocli.java`
+- [X] Porque Sintaxe
+    - [X] https://blog.vepo.dev/posts/java-101-sintaxe
+- [X] Pacotes/Classes/Métodos/Campos/Váriáveis
+    - [X] https://vepo.substack.com/p/sobre-design-de-software-iii-como
+    - [X] O que são pacotes?
+    - [X] O que são classes?
+    - [X] O que são métodos?
+    - [X] O que são variavéis?
+    - [X] O que são campos?
+    - [X] Lambda Function
+- [X] Memória
+    - [X] Memória heap
+    - [X] Stack
+- [X] Controle de Fluxo
+    - [X] Estruturas https://blog.vepo.dev/posts/java-101-sintaxe
+    - [X] Lambda Function
