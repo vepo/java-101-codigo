@@ -1,0 +1,54 @@
+<html>
+
+<body>
+    <h1>Ponteiros?!?!</h1>
+    <div id="container"></div>
+    <script>
+        let x = {}; // stack
+        let y = x;
+        let z = new Object(); // heap
+        let w = z
+
+        function deuErrado() {
+            let obj = null;
+            obj.callFn();
+        }
+
+        function appendOnContainer(text) {
+            container.appendChild(document.createTextNode(text));
+            container.appendChild(document.createElement('br'));
+        }
+        window.onload = function () {
+            try {
+                let container = document.getElementById('container');
+                appendOnContainer(`x=${JSON.stringify(x)}`);
+                appendOnContainer(`y=${JSON.stringify(y)}`);
+                appendOnContainer(`z=${JSON.stringify(z)}`);
+                appendOnContainer(`w=${JSON.stringify(w)}`);
+                x.a = 'AAAAA';
+                w.b = 'bbbbbb';
+                appendOnContainer(`x=${JSON.stringify(x)}`);
+                appendOnContainer(`y=${JSON.stringify(y)}`);
+                appendOnContainer(`z=${JSON.stringify(z)}`);
+                appendOnContainer(`w=${JSON.stringify(w)}`);
+                y = { x: y, c: 'cccccc' }
+                x.b = 'bbbbbb';
+                appendOnContainer(`x=${JSON.stringify(x)}`);
+                appendOnContainer(`y=${JSON.stringify(y)}`);
+                x.print = () => appendOnContainer('Olá');
+
+                y.x.print();
+                x.print();
+                x.a = deuErrado;
+                x.a();
+                // y.x = null;
+                // y.x.print();
+            } catch (e) {
+                appendOnContainer(`Error: ${e}`);
+                appendOnContainer(`Stack: ${e.stack}`)
+            }
+        }
+    </script>
+</body>
+
+</html>

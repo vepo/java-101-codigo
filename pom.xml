@@ -2,7 +2,7 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.vepo.helloworld</groupId> <!-- Use um identificado para sua empresa                    -->
+    <groupId>dev.vepo</groupId> <!-- Use um identificado para sua empresa                    -->
     <artifactId>hello-world</artifactId>  <!-- Use um identificado para seu projeto                    -->
     <version>1.0.0-SNAPSHOT</version>     <!-- Use um versão baseada em https://semver.org/lang/pt-BR/ -->
     <name>Hello World!</name>             <!-- Dê um nome legal ao seu projeto                         -->
@@ -15,7 +15,7 @@
 
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <junit.jupiter.version>5.9.0-M1</junit.jupiter.version>
+        <junit.jupiter.version>6.0.3</junit.jupiter.version>
     </properties>
 
     <dependencies>
